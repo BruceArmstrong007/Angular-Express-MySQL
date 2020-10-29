@@ -1,0 +1,42 @@
+<mat-sidenav-container class="nav-container">
+  <mat-sidenav mode="side" opened>
+  <a href="/" class="logo" mat-flat-button>LOGO</a>
+  <a href="/" class="tabs" mat-raised-button><mat-icon>home</mat-icon>Home</a>
+  <a href="/" class="tabs" mat-raised-button><mat-icon>people</mat-icon>Employees</a>
+  <a href="/" class="tabs" mat-raised-button><mat-icon>group_add</mat-icon>Vendors</a>
+  <a href="/" class="tabs" mat-raised-button><mat-icon>settings</mat-icon>Settings</a>
+  <a href="/" class="logout" mat-raised-button><mat-icon>logout</mat-icon>Logout</a>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar class="toolbar">
+      <span id="left">
+        <div class="searchbar-container">
+        <mat-form-field  appearance="outline">
+          <mat-icon matSuffix>search</mat-icon>
+          <mat-label>Search Vendors</mat-label>
+          <input matInput placeholder="Search Vendors" required>
+        </mat-form-field>
+      </div>
+      </span>
+      <span id="right">
+      <button class="com" mat-button [matMenuTriggerFor]="menu">Organization ABC<mat-icon>expand_more</mat-icon></button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>Organization ABC</button>
+    <button mat-menu-item>Organization DEF</button>
+  </mat-menu>
+  <mat-icon id="icon">person</mat-icon>
+  </span>
+    </mat-toolbar>
+  <div>
+    <span *ngIf="loc == '/'">
+      <app-display></app-display>
+    </span>
+    <span *ngIf="loc == '/vendor-create'">
+      <app-create></app-create>
+    </span>
+    <span *ngIf="loc == '/vendor-edit'">
+      <app-edit></app-edit>
+    </span>
+  </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

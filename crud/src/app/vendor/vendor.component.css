@@ -1,0 +1,68 @@
+body{
+  width: 100%;
+}
+.nav-container {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+
+}
+
+mat-sidenav {
+  width: 25%;
+  background-color: blue;
+}
+mat-sidenav > a{
+  position: relative;
+  color: blue;
+
+}
+
+.logo{
+  margin-top : 10%;
+  margin-bottom : 30%;
+  margin-left : 8%;
+  margin-right : 8%;
+  justify-content: center;
+  border-radius: 0px;
+  width: 80%;
+}
+
+.tabs{
+  margin-top : 10%;
+  margin-left : 8%;
+  margin-right : 8%;
+  justify-content: center;
+  border-radius: 15px;
+  width: 80%;
+}
+
+.logout{
+  margin-top : 35%;
+  margin-left : 8%;
+  margin-right : 8%;
+  justify-content: center;
+  width: 80%;
+}
+
+.toolbar{
+  width: 100%;
+padding-top: 2%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.searchbar-container {
+font-size:12px;
+}
+.com{
+
+}
+#icon{
+font-size:32px;
+}

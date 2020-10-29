@@ -1,0 +1,30 @@
+
+<mat-card>
+  <mat-card-content>
+    <a mat-raised-button [routerLink]="['/']" routerLinkActive="router-link-active" >Back</a>
+    <hr>
+    <h1>Edit Vendor</h1>
+<form (ngSubmit)="postData(postForm)" #postForm="ngForm">
+    <mat-form-field>
+    <input matInput type="number" placeholder="ID:" [value]="vid" id="vid" name="id" ngModel readonly>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput type="text" placeholder="Vendor Name:" [value]="vendorName" id="vendorName" name="vendorName" minlength="3" maxlength="45" ngModel required>
+  </mat-form-field>
+   <mat-form-field>
+  <mat-label>Choose a Type:</mat-label>
+     <select matNativeControl id="type" name="type" ngModel required>
+      <option *ngFor='let element of category' [selected]="element == type" [value]="element">{{element}}</option>
+     </select>
+    </mat-form-field>
+    <mat-form-field>
+     <input matInput type="email" placeholder="Email ID:" [value]="contactEmail" id="contactEmail" name="contactEmail" minlength="3" ngModel required>
+    </mat-form-field>
+   <mat-form-field>
+    <input matInput type="url" placeholder="Website URL:" id="websiteURL" name="websiteURL" [value]="websiteURL" minlength="3" ngModel required>
+   </mat-form-field>
+   <hr>
+     <button mat-raised-button color="primary" id="submit" type="submit">Submit</button>
+  </form>
+</mat-card-content>
+</mat-card>
